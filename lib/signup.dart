@@ -1,39 +1,15 @@
-import 'package:chapter_4_practical/signup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: ''),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+class MySignUp extends StatefulWidget {
+  const MySignUp({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MySignUp> createState() => _MySignUpState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MySignUpState extends State<MySignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,14 +18,14 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         systemOverlayStyle:
-        const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+            const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Padding(
-              padding:
-              const EdgeInsets.only(right: 80, left: 80, top: 25, bottom: 15),
+              padding: const EdgeInsets.only(
+                  right: 80, left: 80, top: 25, bottom: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -78,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const Padding(
               padding: EdgeInsets.only(left: 50, right: 50),
               child: Text(
-                'Please enter your e-mail address\nand enter password',
+                'Please enter your e-mail address\nand create password',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.grey,
@@ -88,6 +64,40 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 25, left: 25, top: 50),
+              child: TextField(
+                showCursor: false,
+                textAlign: TextAlign.start,
+                decoration: InputDecoration(
+                    fillColor: Colors.grey.shade100,
+                    filled: true,
+                    hintText: "Full name",
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
+                      fontSize: 18,
+                    ),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(50)),
+                    prefixIcon: const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10.0),
+                      child: DecoratedBox(
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle, color: Colors.white),
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Icon(
+                              Icons.person_outline,
+                              color: CupertinoColors.systemGrey,
+                              fill: BorderSide.strokeAlignCenter,
+                              size: 22,
+                            ),
+                          )),
+                    ),
+                    contentPadding: const EdgeInsets.all(20)),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 25, left: 25, top: 25),
               child: TextField(
                 showCursor: false,
                 textAlign: TextAlign.start,
@@ -174,17 +184,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 150),
-              child: TextButton(
-                  onPressed: () {}, child: const Text('Forgot password?',
-                style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500),)
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 25),
+              padding: const EdgeInsets.only(top: 125),
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
@@ -192,10 +192,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50)),
                     elevation: 25,
-                    fixedSize: Size(275, 60)),
-                child: Text("Login",
-                    style: TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.w500)),
+                    fixedSize: const Size(275, 60)),
+                child: const Text("Sign up",
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.w500)),
               ),
             ),
             Padding(
@@ -204,21 +204,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "Don't have an account? ",
+                    "Already have an account?",
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.grey,
                     ),
                   ),
-                  const SizedBox(width: 5,),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(context,MaterialPageRoute(builder:(context) => const MySignUp()));
-                    }, child: const Text("Sign Up", style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                  ),),
+                      Navigator.pop(context);
+                    },
+                    child: const Text(
+                      "Login",
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   )
                 ],
               ),
@@ -241,11 +244,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Expanded(
                       child: Divider(
-                        color: Colors.grey,
-                        height: 25,
-                        thickness: 0.25,
-                        indent: 20,
-                      ))
+                    color: Colors.grey,
+                    height: 25,
+                    thickness: 0.25,
+                    indent: 20,
+                  ))
                 ],
               ),
             ),
