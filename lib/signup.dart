@@ -62,6 +62,8 @@ class _MySignUpState extends State<MySignUp> {
                 textAlign: TextAlign.center,
               ),
             ),
+
+            ///Full Name TextField
             Padding(
               padding: const EdgeInsets.only(right: 25, left: 25, top: 50),
               child: TextField(
@@ -78,6 +80,9 @@ class _MySignUpState extends State<MySignUp> {
                     border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(50)),
+
+
+                    ///Icon of Person
                     prefixIcon: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10.0),
                       child: DecoratedBox(
@@ -96,6 +101,8 @@ class _MySignUpState extends State<MySignUp> {
                     contentPadding: const EdgeInsets.all(20)),
               ),
             ),
+
+            ///Email TextField
             Padding(
               padding: const EdgeInsets.only(right: 25, left: 25, top: 25),
               child: TextField(
@@ -112,6 +119,8 @@ class _MySignUpState extends State<MySignUp> {
                     border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(50)),
+
+                    ///Icon for Email
                     prefixIcon: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10.0),
                       child: DecoratedBox(
@@ -130,6 +139,9 @@ class _MySignUpState extends State<MySignUp> {
                     contentPadding: const EdgeInsets.all(20)),
               ),
             ),
+
+
+            ///Password TextField
             Padding(
               padding: const EdgeInsets.only(right: 25, left: 25, top: 25),
               child: TextField(
@@ -146,6 +158,8 @@ class _MySignUpState extends State<MySignUp> {
                     border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(50)),
+
+                    ///Icon for Password
                     prefixIcon: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: DecoratedBox(
@@ -163,6 +177,8 @@ class _MySignUpState extends State<MySignUp> {
                             ),
                           )),
                     ),
+
+                    ///Icon for Visibility ON and OFF
                     suffixIcon: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10.0),
                       child: DecoratedBox(
@@ -183,6 +199,9 @@ class _MySignUpState extends State<MySignUp> {
                     contentPadding: const EdgeInsets.all(20)),
               ),
             ),
+
+
+            ///SignUp ElevatedButton
             Padding(
               padding: const EdgeInsets.only(top: 125),
               child: ElevatedButton(
@@ -210,6 +229,9 @@ class _MySignUpState extends State<MySignUp> {
                       color: Colors.grey,
                     ),
                   ),
+
+
+                  ///Login TextButton
                   TextButton(
                     onPressed: () {
                       Navigator.pop(context);
@@ -226,6 +248,9 @@ class _MySignUpState extends State<MySignUp> {
                 ],
               ),
             ),
+
+
+            ///Divider with Sign in With Text
             Padding(
               padding: const EdgeInsets.only(top: 20, left: 25, right: 25),
               child: Row(
@@ -257,6 +282,8 @@ class _MySignUpState extends State<MySignUp> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
+                  ///FaceBook
                   Container(
                       height: 65,
                       width: 65,
@@ -268,6 +295,8 @@ class _MySignUpState extends State<MySignUp> {
                   const SizedBox(
                     width: 50,
                   ),
+
+                  ///Google
                   Container(
                       height: 65,
                       width: 65,
@@ -279,6 +308,8 @@ class _MySignUpState extends State<MySignUp> {
                   const SizedBox(
                     width: 50,
                   ),
+
+                  ///Twitter
                   Container(
                       height: 65,
                       width: 65,

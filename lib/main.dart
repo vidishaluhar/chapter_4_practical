@@ -10,7 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -53,6 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  ///FireIcon
                   Image.asset(
                     'assets/images/fire_emoji.png',
                     width: 40,
@@ -86,6 +86,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 textAlign: TextAlign.center,
               ),
             ),
+
+
+            ///Email TextField
             Padding(
               padding: const EdgeInsets.only(right: 25, left: 25, top: 50),
               child: TextField(
@@ -102,6 +105,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(50)),
+
+
+                    ///Icon for Email
                     prefixIcon: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10.0),
                       child: DecoratedBox(
@@ -120,6 +126,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     contentPadding: const EdgeInsets.all(20)),
               ),
             ),
+
+            ///Password TextField
             Padding(
               padding: const EdgeInsets.only(right: 25, left: 25, top: 25),
               child: TextField(
@@ -136,6 +144,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(50)),
+
+
+                    ///Icon for Password
                     prefixIcon: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: DecoratedBox(
@@ -153,6 +164,9 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           )),
                     ),
+
+
+                    ///Icon for Visibility ON and OFF
                     suffixIcon: const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10.0),
                       child: DecoratedBox(
@@ -173,6 +187,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     contentPadding: const EdgeInsets.all(20)),
               ),
             ),
+
+            ///Forgot Password TextButton
             Padding(
               padding: const EdgeInsets.only(top: 150),
               child: TextButton(
@@ -183,6 +199,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     fontWeight: FontWeight.w500),)
               ),
             ),
+
+            ///Login ElevatedButton
             Padding(
               padding: const EdgeInsets.only(top: 25),
               child: ElevatedButton(
@@ -211,6 +229,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   const SizedBox(width: 5,),
+
+
+                  ///Sign Up TextButton
                   TextButton(
                     onPressed: () {
                       Navigator.push(context,MaterialPageRoute(builder:(context) => const MySignUp()));
@@ -223,6 +244,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+
+            ///Divider with Sign in Text
             Padding(
               padding: const EdgeInsets.only(top: 20, left: 25, right: 25),
               child: Row(
@@ -254,6 +277,8 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
+                  ///Facebook
                   Container(
                       height: 65,
                       width: 65,
@@ -265,6 +290,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   const SizedBox(
                     width: 50,
                   ),
+
+                  ///Google
                   Container(
                       height: 65,
                       width: 65,
@@ -276,6 +303,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   const SizedBox(
                     width: 50,
                   ),
+
+                  ///Twitter
                   Container(
                       height: 65,
                       width: 65,
